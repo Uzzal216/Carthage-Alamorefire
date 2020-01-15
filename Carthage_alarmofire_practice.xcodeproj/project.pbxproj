@@ -15,6 +15,9 @@
 		856310AF23CF1CDC00FB609C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856310AD23CF1CDC00FB609C /* LaunchScreen.storyboard */; };
 		856310BA23CF1CDC00FB609C /* Carthage_alarmofire_practiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856310B923CF1CDC00FB609C /* Carthage_alarmofire_practiceTests.swift */; };
 		856310C523CF1CDC00FB609C /* Carthage_alarmofire_practiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856310C423CF1CDC00FB609C /* Carthage_alarmofire_practiceUITests.swift */; };
+		85AE6A4423CF26D80059DDAF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AE6A4323CF26D80059DDAF /* Alamofire.framework */; };
+		85AE6A4723CF2CC80059DDAF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AE6A4623CF2CC80059DDAF /* Alamofire.framework */; };
+		85AE6A4823CF2CC80059DDAF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 85AE6A4623CF2CC80059DDAF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		85AE6A4923CF2CC80059DDAF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				85AE6A4823CF2CC80059DDAF /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8563109E23CF1CD700FB609C /* Carthage_alarmofire_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carthage_alarmofire_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		856310A123CF1CD800FB609C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,8 @@
 		856310C023CF1CDC00FB609C /* Carthage_alarmofire_practiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Carthage_alarmofire_practiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		856310C423CF1CDC00FB609C /* Carthage_alarmofire_practiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carthage_alarmofire_practiceUITests.swift; sourceTree = "<group>"; };
 		856310C623CF1CDC00FB609C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85AE6A4323CF26D80059DDAF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		85AE6A4623CF2CC80059DDAF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85AE6A4423CF26D80059DDAF /* Alamofire.framework in Frameworks */,
+				85AE6A4723CF2CC80059DDAF /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +100,12 @@
 		8563109523CF1CD700FB609C = {
 			isa = PBXGroup;
 			children = (
+				85AE6A4623CF2CC80059DDAF /* Alamofire.framework */,
 				856310A023CF1CD700FB609C /* Carthage_alarmofire_practice */,
 				856310B823CF1CDC00FB609C /* Carthage_alarmofire_practiceTests */,
 				856310C323CF1CDC00FB609C /* Carthage_alarmofire_practiceUITests */,
 				8563109F23CF1CD700FB609C /* Products */,
+				85AE6A4223CF26D70059DDAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +151,14 @@
 			path = Carthage_alarmofire_practiceUITests;
 			sourceTree = "<group>";
 		};
+		85AE6A4223CF26D70059DDAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85AE6A4323CF26D80059DDAF /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +169,8 @@
 				8563109A23CF1CD700FB609C /* Sources */,
 				8563109B23CF1CD700FB609C /* Frameworks */,
 				8563109C23CF1CD700FB609C /* Resources */,
+				85AE6A4523CF29CE0059DDAF /* ShellScript */,
+				85AE6A4923CF2CC80059DDAF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +286,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		85AE6A4523CF29CE0059DDAF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8563109A23CF1CD700FB609C /* Sources */ = {
@@ -437,6 +490,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Carthage_alarmofire_practice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +511,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Carthage_alarmofire_practice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
